@@ -2,6 +2,7 @@ Autonomous driving system
 
 
 <수상내역>
+
  [‘2022 국제 대학생 창작 경진대회 대상(국토교통부 장관상)’]
  
  [‘2022 Future Mobility Urban Challenge 안전상(서울대학교 미래모빌리티기술센터장상)’] 
