@@ -1,0 +1,5 @@
+<launch>
+	<node name="vision_acc" pkg="vision_final" type="vision_acc_node" output="screen">
+	</node>
+
+</launch>
