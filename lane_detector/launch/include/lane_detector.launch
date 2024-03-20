@@ -1,0 +1,37 @@
+<launch>
+	<node pkg="lane_detector" type="lane_detector" name="lane_detector">
+		<param name="resize_width" value="320" />
+		<param name="resize_height" value="240" />
+
+		<!-- 1. Binary threshold -->
+		<param name="gray_bin_thres" value="180" />
+		<param name="hsv_s_bin_thres" value="180" />
+
+		<!-- 2. Detect line -->
+		<param name="detect_line_count" value="1" />
+		<param name="detect_y_offset_1" value="30" />
+		<!-- param name="detect_y_offset_2" value="" /-->
+
+		<!-- 3. Detect offset -->
+		<param name="left_detect_offset" value="0" />
+		<param name="right_detect_offset" value="0" />
+
+		<!-- 4. Control hardware -->
+		<!-- rc car -->
+		<!--param name="steer_max_angle" value="30" /-->
+		<!--param name="throttle" value="1515" /-->
+		<!--remap from="/crosswalk_stop/write" to="write" /-->
+
+		<!-- scale platform -->
+		<param name="steer_max_angle" value="35" />
+		<param name="throttle" value="16" />
+		<remap from="/lane_detector/ackermann" to="ackermann" />
+
+		<!-- 5. Control factor -->
+		<!-- yaw_error *= yaw_factor / 100 -->
+		<param name="yaw_factor" value="40" />
+
+		<!-- lateral_error *= lateral_factor/ 100 -->
+		<param name="lateral_factor" value="80" />
+	</node>
+</launch>
