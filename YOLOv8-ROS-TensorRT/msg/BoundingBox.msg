@@ -1,0 +1,9 @@
+int64 x
+int64 y
+int64 w
+int64 h
+int16 id
+string Class
+int64 x_max
+int64 y_max
+float64 probability

@@ -1,0 +1,8 @@
+<launch>
+    <param name="topic_img"     type="string" value="/kitti/camera_color_left/image_raw" />
+    <param name="topic_res_img" type="string" value="/segment/image_raw" />
+    <param name="box_result" type="string" value="/segment/result" />
+    <param name="weight_name"   type="string" value="yolov8n-seg.engine" />
+
+    <node pkg="yolov8_trt" name="segment" type="segment" output="screen" />
+</launch>
